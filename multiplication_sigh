@@ -1,0 +1,10 @@
+def multiplication(a, b, c):
+    if a == 0 or b == 0 or c == 0:
+        return "zero"
+    negatives = sum(1 for num in (a, b, c) if num < 0)
+    return "negative" if negatives % 2 != 0 else "positive"
+
+current_a = int(input())
+current_b = int(input())
+current_c = int(input())
+print(multiplication(current_a, current_b, current_c))
