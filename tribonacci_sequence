@@ -1,0 +1,20 @@
+def tribonacci_sequence(n):
+    if n == 0:
+        return []
+    elif n == 1:
+        return [1]
+    elif n == 2:
+        return [1, 1]
+    elif n == 3:
+        return [1, 1, 2]
+
+    sequence = [1, 1, 2]
+    for i in range(3, n):
+        next_number = sequence[i - 1] + sequence[i - 2] + sequence[i - 3]
+        sequence.append(next_number)
+
+    return sequence
+
+number = int(input())
+result = tribonacci_sequence(number)
+print(' '.join(map(str, result)))
