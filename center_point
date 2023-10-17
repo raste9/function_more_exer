@@ -1,0 +1,18 @@
+from math import floor
+
+def closest_points(x1, x2, y1, y2):
+    distance1 = (x1 ** 2 + y1 ** 2) ** 0.5
+    distance2 = (x2 ** 2 + y2 ** 2) ** 0.5
+
+    if distance1 <= distance2:
+        return f'({x1}, {y1})'
+    else:
+        return f'({x2}, {y2})'
+
+x1 = floor(float(input()))
+y1 = floor(float(input()))
+x2 = floor(float(input()))
+y2 = floor(float(input()))
+
+result = closest_points(x1, x2, y1, y2)
+print(result)
