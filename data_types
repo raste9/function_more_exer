@@ -1,0 +1,31 @@
+def data_types(data1, data2):
+    if data1 == 'int':
+        result = int(data2) * 2
+    elif data1 == 'real':
+        result = float(data2) * 1.5
+        result = '{:.2f}'.format(result)
+    elif data1 == 'string':
+        result = '$' + data2 + '$'
+    return result
+
+data1 = input()
+data2 = input()
+
+result = data_types(data1, data2)
+print(result)
+--------------------------------------------
+          
+def data_types(data1, data2):
+    if data1 == 'int':
+        result = int(data2) * 2
+        return f'{result:.0f}'
+    elif data1 == 'real':
+        result = float(data2) * 1.5
+        return f'{result:.2f}'
+    elif data1 == 'string':
+        return f'${data2}$'
+
+data1 = input()
+data2 = input()
+
+print(data_types(data1, data2))
